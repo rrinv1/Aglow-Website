@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Glow Account creation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+    <div class="box">
+        <h2>already one of us?</h2>
+        <form>
+            <label>Email Address*</label>
+            <input type="email" required>
+
+            <label>Password*</label>
+            <div class="password-field">
+                <input type="password" id="loginPassword" required>
+                <span onclick="togglePassword('loginPassword')">SHOW</span>
+            </div>
+
+            <button type="submit" class="btn">SIGN IN</button>
+
+            <p class="small">Forgot something?</p>
+            <button class="btn-outline">LOGIN WITHOUT PASSWORD</button>
+        </form>
+    </div>
+
+    <div class="box">
+        <h2>first time here?</h2>
+        <form>
+            <label>First Name*</label>
+            <input type="text" required>
+
+            <label>Last Name*</label>
+            <input type="text" required>
+
+            <label>Email Address*</label>
+            <input type="email" required>
+
+            <label>Confirm Email*</label>
+            <input type="email" required>
+
+            <label>Password*</label>
+            <div class="password-field">
+                <input type="password" id="regPassword" required>
+                <span onclick="togglePassword('regPassword')">SHOW</span>
+            </div>
+
+            <button type="submit" class="btn">CREATE ACCOUNT</button>
+        </form>
+    </div>
+</div>
+
+<script>
+function togglePassword(id) {
+    const field = document.getElementById(id);
+    field.type = field.type === "password" ? "text" : "password";
+}
+</script>
